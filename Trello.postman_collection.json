@@ -1,0 +1,513 @@
+{
+	"info": {
+		"_postman_id": "8353f7e1-3469-45fa-843c-0e089b37ae85",
+		"name": "Trello",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Board1",
+			"item": [
+				{
+					"name": "List",
+					"item": [
+						{
+							"name": "ListALLLists",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://trello.com/b/Kqnbe0RU/assignment?key={{key}}&token={{token}} ",
+									"protocol": "https",
+									"host": [
+										"trello",
+										"com"
+									],
+									"path": [
+										"b",
+										"Kqnbe0RU",
+										"assignment"
+									],
+									"query": [
+										{
+											"key": "key",
+											"value": "{{key}}"
+										},
+										{
+											"key": "token",
+											"value": "{{token}} "
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "CreateList1",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "https://api.trello.com/1/lists?name=List1&idBoard={{board1id}}&key={{key}}&token={{token}}",
+									"protocol": "https",
+									"host": [
+										"api",
+										"trello",
+										"com"
+									],
+									"path": [
+										"1",
+										"lists"
+									],
+									"query": [
+										{
+											"key": "name",
+											"value": "List1"
+										},
+										{
+											"key": "idBoard",
+											"value": "{{board1id}}"
+										},
+										{
+											"key": "key",
+											"value": "{{key}}"
+										},
+										{
+											"key": "token",
+											"value": "{{token}}"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "createList2",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "https://api.trello.com/1/lists?name=List2&idBoard={{board1id}}&key={{key}}&token={{token}}",
+									"protocol": "https",
+									"host": [
+										"api",
+										"trello",
+										"com"
+									],
+									"path": [
+										"1",
+										"lists"
+									],
+									"query": [
+										{
+											"key": "name",
+											"value": "List2"
+										},
+										{
+											"key": "idBoard",
+											"value": "{{board1id}}"
+										},
+										{
+											"key": "key",
+											"value": "{{key}}"
+										},
+										{
+											"key": "token",
+											"value": "{{token}}"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Create Board",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://api.trello.com/1/boards/?key=7573568955af87a5fa5d84416cac1e08&token=b720c566dd9f5af97f36984257eb264e6726de41518d28a3978e63faec61e85b&name=Assingment",
+							"protocol": "https",
+							"host": [
+								"api",
+								"trello",
+								"com"
+							],
+							"path": [
+								"1",
+								"boards",
+								""
+							],
+							"query": [
+								{
+									"key": "actions",
+									"value": "all",
+									"disabled": true
+								},
+								{
+									"key": "boardStars",
+									"value": "none",
+									"disabled": true
+								},
+								{
+									"key": "cards",
+									"value": "none",
+									"disabled": true
+								},
+								{
+									"key": "card_pluginData",
+									"value": "false",
+									"disabled": true
+								},
+								{
+									"key": "checklists",
+									"value": "none",
+									"disabled": true
+								},
+								{
+									"key": "customFields",
+									"value": "false",
+									"disabled": true
+								},
+								{
+									"key": "fields",
+									"value": "name%2Cdesc%2CdescData%2Cclosed%2CidOrganization%2Cpinned%2Curl%2CshortUrl%2Cprefs%2ClabelNames",
+									"disabled": true
+								},
+								{
+									"key": "lists",
+									"value": "open",
+									"disabled": true
+								},
+								{
+									"key": "members",
+									"value": "none",
+									"disabled": true
+								},
+								{
+									"key": "memberships",
+									"value": "none",
+									"disabled": true
+								},
+								{
+									"key": "membersInvited",
+									"value": "none",
+									"disabled": true
+								},
+								{
+									"key": "membersInvited_fields",
+									"value": "all",
+									"disabled": true
+								},
+								{
+									"key": "pluginData",
+									"value": "false",
+									"disabled": true
+								},
+								{
+									"key": "organization",
+									"value": "false",
+									"disabled": true
+								},
+								{
+									"key": "organization_pluginData",
+									"value": "false",
+									"disabled": true
+								},
+								{
+									"key": "myPrefs",
+									"value": "false",
+									"disabled": true
+								},
+								{
+									"key": "tags",
+									"value": "false",
+									"disabled": true
+								},
+								{
+									"key": "key",
+									"value": "7573568955af87a5fa5d84416cac1e08"
+								},
+								{
+									"key": "token",
+									"value": "b720c566dd9f5af97f36984257eb264e6726de41518d28a3978e63faec61e85b"
+								},
+								{
+									"key": "name",
+									"value": "Assingment"
+								},
+								{
+									"key": "defaultLabels",
+									"value": "true",
+									"disabled": true
+								},
+								{
+									"key": "defaultLists",
+									"value": "true",
+									"disabled": true
+								},
+								{
+									"key": "keepFromSource",
+									"value": "none",
+									"disabled": true
+								},
+								{
+									"key": "prefs_permissionLevel",
+									"value": "private",
+									"disabled": true
+								},
+								{
+									"key": "prefs_voting",
+									"value": "disabled",
+									"disabled": true
+								},
+								{
+									"key": "prefs_comments",
+									"value": "members",
+									"disabled": true
+								},
+								{
+									"key": "prefs_invitations",
+									"value": "members",
+									"disabled": true
+								},
+								{
+									"key": "prefs_selfJoin",
+									"value": "true",
+									"disabled": true
+								},
+								{
+									"key": "prefs_cardCovers",
+									"value": "true",
+									"disabled": true
+								},
+								{
+									"key": "prefs_background",
+									"value": "blue",
+									"disabled": true
+								},
+								{
+									"key": "prefs_cardAging",
+									"value": "regular",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Board",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.trello.com/1/boards/5d1360dd836b8337074ce23e?key=7573568955af87a5fa5d84416cac1e08&token=b720c566dd9f5af97f36984257eb264e6726de41518d28a3978e63faec61e85b",
+							"protocol": "https",
+							"host": [
+								"api",
+								"trello",
+								"com"
+							],
+							"path": [
+								"1",
+								"boards",
+								"5d1360dd836b8337074ce23e"
+							],
+							"query": [
+								{
+									"key": "actions",
+									"value": "all",
+									"disabled": true
+								},
+								{
+									"key": "boardStars",
+									"value": "none",
+									"disabled": true
+								},
+								{
+									"key": "cards",
+									"value": "none",
+									"disabled": true
+								},
+								{
+									"key": "card_pluginData",
+									"value": "false",
+									"disabled": true
+								},
+								{
+									"key": "checklists",
+									"value": "none",
+									"disabled": true
+								},
+								{
+									"key": "customFields",
+									"value": "false",
+									"disabled": true
+								},
+								{
+									"key": "fields",
+									"value": "name%2Cdesc%2CdescData%2Cclosed%2CidOrganization%2Cpinned%2Curl%2CshortUrl%2Cprefs%2ClabelNames",
+									"disabled": true
+								},
+								{
+									"key": "lists",
+									"value": "open",
+									"disabled": true
+								},
+								{
+									"key": "members",
+									"value": "none",
+									"disabled": true
+								},
+								{
+									"key": "memberships",
+									"value": "none",
+									"disabled": true
+								},
+								{
+									"key": "membersInvited",
+									"value": "none",
+									"disabled": true
+								},
+								{
+									"key": "membersInvited_fields",
+									"value": "all",
+									"disabled": true
+								},
+								{
+									"key": "pluginData",
+									"value": "false",
+									"disabled": true
+								},
+								{
+									"key": "organization",
+									"value": "false",
+									"disabled": true
+								},
+								{
+									"key": "organization_pluginData",
+									"value": "false",
+									"disabled": true
+								},
+								{
+									"key": "myPrefs",
+									"value": "false",
+									"disabled": true
+								},
+								{
+									"key": "tags",
+									"value": "false",
+									"disabled": true
+								},
+								{
+									"key": "key",
+									"value": "7573568955af87a5fa5d84416cac1e08"
+								},
+								{
+									"key": "token",
+									"value": "b720c566dd9f5af97f36984257eb264e6726de41518d28a3978e63faec61e85b"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Name",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "23f3214b-9ad2-42e8-8ca4-73106bd68ace",
+								"exec": [
+									"pm.environment.set(\"board1id\", pm.response.json().id);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "https://api.trello.com/1/boards/5d1360dd836b8337074ce23e?key=7573568955af87a5fa5d84416cac1e08&token=b720c566dd9f5af97f36984257eb264e6726de41518d28a3978e63faec61e85b&name=Assignments",
+							"protocol": "https",
+							"host": [
+								"api",
+								"trello",
+								"com"
+							],
+							"path": [
+								"1",
+								"boards",
+								"5d1360dd836b8337074ce23e"
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": "7573568955af87a5fa5d84416cac1e08"
+								},
+								{
+									"key": "token",
+									"value": "b720c566dd9f5af97f36984257eb264e6726de41518d28a3978e63faec61e85b"
+								},
+								{
+									"key": "name",
+									"value": "Assignments"
+								},
+								{
+									"key": "id",
+									"value": "5d1360dd836b8337074ce23e",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "listAllBoard",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.trello.com/1/members/abhishekchoubey3/boards?key={{key}}&token={{token}} ",
+							"protocol": "https",
+							"host": [
+								"api",
+								"trello",
+								"com"
+							],
+							"path": [
+								"1",
+								"members",
+								"abhishekchoubey3",
+								"boards"
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": "{{key}}"
+								},
+								{
+									"key": "token",
+									"value": "{{token}} "
+								},
+								{
+									"key": "siteid",
+									"value": "abhishekchoubey3",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
