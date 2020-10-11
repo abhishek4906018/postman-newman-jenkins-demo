@@ -1,0 +1,77 @@
+{
+	"info": {
+		"_postman_id": "def99f39-9b37-47f2-8aff-a1cfc485f037",
+		"name": "FakeRestAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "PUT Request",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "f5e18f25-9c54-4c3b-8c61-2d1d88add09c",
+						"exec": [
+							"const BODY={",
+							"     \"ID\": 4,",
+							"    \"Title\": \"Activity 4\",",
+							"    \"DueDate\": \"2020-10-11T20:00:19.3495046+00:00\",",
+							"    \"Completed\": true",
+							"};",
+							"//Status Code 200",
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"//Check is  Content type header is application/json;charset=UTF-8",
+							"tests[\"content-type header is set to Application-Json\"]= postman.getResponseHeader(\"Content-Type\")===\"application/json;charset=UTF-8\";",
+							"",
+							"",
+							"",
+							"//ID not equal to null",
+							"var responseData = JSON.parse(responseBody);",
+							"tests['ID'] = responseBody.ID !== null ;",
+							"",
+							"var BodyJson = JSON.parse(responseBody);",
+							"tests[\"Result is schema valid\"] = tv4.validate(BodyJson, BODY);",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"ID\": {{id}},\r\n  \"Title\": {{title}},\r\n  \"DueDate\": \"2020-10-11T14:56:22.054Z\",\r\n  \"Completed\": true\r\n}"
+				},
+				"url": {
+					"raw": "https://fakerestapi.azurewebsites.net/api/Activities/4",
+					"protocol": "https",
+					"host": [
+						"fakerestapi",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"api",
+						"Activities",
+						"4"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
